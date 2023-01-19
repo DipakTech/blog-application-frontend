@@ -55,6 +55,7 @@ export default function Blog() {
             if (like === userId) {
               setLiked(true);
             }
+            return 0;
           });
         }
         setInterval(() => {
@@ -83,6 +84,7 @@ export default function Blog() {
                 if (like === userId) {
                   setLiked(true);
                 }
+                return 0;
               });
             }
           })
@@ -104,6 +106,7 @@ export default function Blog() {
                 if (like === userId) {
                   setLiked(true);
                 }
+                return 0;
               });
               setLiked(false);
             }
