@@ -40,7 +40,7 @@ export default function Home() {
     <>
       <NavBar />
       <div className="home-container">
-        <h1 className="main-heading">Recent Blogs</h1>
+        <h1 className="text-4xl font-sans text-slate-300 text-center my-10">Recent Blogs</h1>
         {loading ? (
           <div className="loader">
             <BallTriangle

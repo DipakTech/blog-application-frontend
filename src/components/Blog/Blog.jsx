@@ -160,7 +160,8 @@ export default function Blog() {
                     <span>{blog.likes ? blog.likes.length : 0}</span>
                   </div>
                   <div className="utility-item comment" onClick={handleShow}>
-                    <FaRegComment />{" "}
+                      <FaRegComment />{" "}
+
                     <span>{blog.comments ? blog.comments.length : 0}</span>
                   </div>
                   <div className="utility-item share" onClick={handleModalShow}>
@@ -168,7 +169,7 @@ export default function Blog() {
                   </div>
                 </>
               ) : (
-                <div className="account-alert">Login to like and comment</div>
+                <div className="account-alert ">Login to like and comment</div>
               )}
             </div>
             <div className="blog">
