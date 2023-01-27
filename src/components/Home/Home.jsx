@@ -65,7 +65,7 @@ export default function Home() {
                       <Card.Img variant="top" src={blog.image} />
                     ) : null}
                     <Card.Body>
-                      <h1>{blog.title}</h1>
+                      <h2 className="leading-normal text-2xl text-gray-500 font-sans font-semibold ">{blog.title}</h2>
                       <div className="blog-info">{blog.author}</div>
                       <div className="blog-info">
                         {new Date(blog.created_at).toDateString()}

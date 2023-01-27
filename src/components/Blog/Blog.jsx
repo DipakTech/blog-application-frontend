@@ -147,7 +147,7 @@ export default function Blog() {
           </div>
         ) : (
           <>
-            <div className="utilities">
+            <div className="utilities px-0 mx-0">
               {loggedIn ? (
                 <>
                   <div
@@ -169,12 +169,12 @@ export default function Blog() {
                   </div>
                 </>
               ) : (
-                <div className="account-alert ">Login to like and comment</div>
+                <div className="text-sm">Login to like and comment</div>
               )}
             </div>
             <div className="blog">
-              <Card>
-                {blog.cloudinaryId ? <Card.Img src={blog.image} className="object-fit h-48 w-96"/> : null}
+              <Card className="px-2 z-10">
+                {blog.cloudinaryId ? <Card.Img src={blog.image} className="object-fit h-48 w-96 "/> : null}
                 <Card.Body>
                   <div>
                     {blog.author}

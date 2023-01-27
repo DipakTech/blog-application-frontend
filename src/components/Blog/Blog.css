@@ -19,7 +19,7 @@
 }
 
 .blog-container .utilities{
-    width: 20%;
+    width: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +55,7 @@
 .blog-container .blog{
     align-self: center;
     width: 85%;
-    padding:0 1rem;
+    padding:0;
 }
 
 .blog-container .blog .card{
