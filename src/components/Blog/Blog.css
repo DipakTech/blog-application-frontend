@@ -16,7 +16,7 @@
 .blog-container .loader svg{
     width: 200px;
     height: 200px;
-}  
+}
 
 .blog-container .utilities{
     width: 20%;
@@ -55,6 +55,7 @@
 .blog-container .blog{
     align-self: center;
     width: 85%;
+    padding:0 1rem;
 }
 
 .blog-container .blog .card{

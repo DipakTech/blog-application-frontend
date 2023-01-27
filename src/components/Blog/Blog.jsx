@@ -174,7 +174,7 @@ export default function Blog() {
             </div>
             <div className="blog">
               <Card>
-                {blog.cloudinaryId ? <Card.Img src={blog.image} /> : null}
+                {blog.cloudinaryId ? <Card.Img src={blog.image} className="object-fit h-48 w-96"/> : null}
                 <Card.Body>
                   <div>
                     {blog.author}

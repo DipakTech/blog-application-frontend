@@ -111,7 +111,7 @@ export default function Footer() {
   </div>
 
   <div className="text-center p-4" style={{"backgroundColor": "rgba(0, 0, 0, 0.2)"}}>
-    © 2021 Copyright:
+    © copyright {new Date().getFullYear()}
     <a className="text-whitehite" href="https://www.instagram.com/dpakgiri/"> Love and made by @dipakgiri</a>
   </div>
 </footer>

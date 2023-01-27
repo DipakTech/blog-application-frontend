@@ -43,7 +43,7 @@ export default function Search() {
     <>
       <NavBar />
       <div className="search-container">
-        <h1 className="main-heading">Results For Your Search</h1>
+        <h1 className="text-2xl text-center">Results For Your Search</h1>
         { loading ? (
         <div className="loader">
           <BallTriangle
