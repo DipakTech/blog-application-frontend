@@ -47,8 +47,9 @@ export default function NavBar() {
   return (
     <>
       <nav className=" px-4 dark:bg-gray-800 dark:text-gray-100 sticky">
-        <div className="w-full md:w-10/12 mx-auto">
-          <div className="container flex justify-between  mx-auto">
+        <div className="w-full flex md:w-10/12 mx-auto">
+          {/* Desktop version */}
+          <div className="container block justify-between  mx-auto md:flex ">
             <a
               rel="noopener noreferrer"
               href="/"
@@ -67,7 +68,7 @@ export default function NavBar() {
               </svg>
               Dipak's blog
             </a>
-            <div className="flex items-center md:space-x-4">
+            <div className={`items-center  ${!show?'hidden':''}  flex-col mt-2 md:mt-0 md:flex-row md:space-x-4  md:flex`} >
               <div className="relative">
                 <form
                   onSubmit={(e) => {
@@ -102,39 +103,44 @@ export default function NavBar() {
                   />
                 </form>
               </div>
-              {loggedIn ? (
-                <>
-                  <button
-                    type="button"
-                    className="px-6 py-2 font-semibold rounded lg:block dark:bg-violet-400 dark:text-gray-900"
-                    onClick={() => {
-                      navigate("/new");
-                    }}
-                  >
-                    Create
-                  </button>
+            {loggedIn ? (
+              <>
+                <div className="flex flex-col md:flex-row gap-3">
+                  <div className="my-auto">
+                    <button
+                      type="button"
+                      className="px-6 py-2 font-semibold  rounded lg:block dark:bg-violet-400 dark:text-gray-900"
+                      onClick={() => {
+                        navigate("/new");
+                      }}
+                    >
+                      Create
+                    </button>
+                  </div>
                   <NavDropdown
                     title={
                       <Identicon
-                      className="user-icon"
-                      string={email}
-                      size={30}
+                        className="user-icon"
+                        string={email}
+                        size={30}
                       />
                     }
-                    >
+                  >
                     <NavDropdown.Item className="z-10 relative">{name}</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item
                       onClick={() => {
                         navigate("/profile");
                       }}
-                      >
+                    >
                       Profile
                     </NavDropdown.Item>
                     <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
                   </NavDropdown>
-\                </>
-              ) : (
+                </div>
+              </>
+            ) : (
+              <div className="flex flex-col md:flex-row gap-3 py-2">
                 <button
                   type="button"
                   className="px-6 py-1 font-semibold rounded lg:block dark:bg-violet-400 dark:text-gray-900"
@@ -144,16 +150,29 @@ export default function NavBar() {
                 >
                   Log in
                 </button>
-              )}
+                <button
+                  type="button"
+                  className="px-6 py-1 font-semibold rounded lg:block dark:bg-violet-400 dark:text-gray-900"
+                  onClick={() => {
+                    navigate("/signup");
+                  }}
+                >
+                  signup
+                </button>
+                  </div>
+                  )}
             </div>
-            {/* <button onClick={()=>setHamburger(!show)} title="Open menu" type="button" className="p-4 lg:hidden">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-100" data-darkreader-inline-stroke="" >
-				<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-			</svg>
-		</button> */}
           </div>
+          <button onClick={() => setHamburger(!show)} title="Open menu" type="button" className=" md:hidden lg:hidden fixed right-3 top-4 ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-100" data-darkreader-inline-stroke="" >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          {/* //mobile view */}
+
         </div>
       </nav>
+
     </>
-  );
+  )
 }
