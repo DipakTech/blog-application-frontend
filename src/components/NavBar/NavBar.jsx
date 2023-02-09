@@ -49,7 +49,7 @@ export default function NavBar() {
       <nav className=" px-4 dark:bg-gray-800 dark:text-gray-100 sticky">
         <div className="w-full flex md:w-10/12 mx-auto">
           {/* Desktop version */}
-          <div className="container fixed top-0 left-0 block justify-between  mx-auto md:flex bg-slate-50">
+          <div className="container fixed top-0 left-0 block justify-between  mx-auto md:flex dark:bg-slate-50">
             <a
               rel="noopener noreferrer"
               href="/"
