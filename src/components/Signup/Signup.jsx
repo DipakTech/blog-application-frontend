@@ -81,7 +81,7 @@ export default function Signup() {
         }
       >
         <h3 className='text-center text-xl font-semibold text-gray-700'>
-          Login to Account
+          Register an Account
         </h3>
         <p className='text-center text-sm mt-2 mb-10'>
           Please sign-in to your account and start the adventure.
